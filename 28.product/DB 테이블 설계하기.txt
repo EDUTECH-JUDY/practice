@@ -1,0 +1,49 @@
+CREATE TABLE t_product
+(
+id					INT(11) NOT NULL PRIMARY KEY,
+product_name		VARCHAR(200) NOT NULL,
+product_price		INT(11) NOT NULL DEFAULT 0,
+delivery_price		INT(11) NOT NULL DEFAULT 0,
+add_delivery_price	INT(11) NOT NULL DEFAULT 0,
+tags				VARCHAR(100) DEFAULT NULL,
+outbound_days		INT(2) NOT NULL DEFAULT 5,
+created_date		DATETIME NOT NULL DEFAULT current_timestamp,
+seller_id			INT(11) NOT NULL
+category_id			INT(11) NOT
+);
+
+CREATE TABLE t_seller
+(
+id					INT(11) NOT NULL PRIMARY KEY,
+name				VARCHAR(100) NOT NULL,
+email				VARCHAR(100) NOT NULL,
+phone				VARCHAR(20) NOT NULL
+);
+
+--t_product의 seller_id와 t_seller의 id 릴레이션
+
+CREATE TABLE t_category
+(
+id					INT(11) NOT NULL PRIMARY KEY,
+category1			VARCHAR(100) NOT NULL,
+category2			VARCHAR(100) NOT NULL,
+category3			VARCHAR(100)
+);
+
+--t_product의 category_id와 t_category의 id 릴레이션
+
+CREATE TABLE t_image
+(
+id					INT(11) NOT NULL PRIMARY KEY,
+product_id			INT(11) NOT NULL,
+type				INT(1) DEFAULT 1 COMMENT '1-썸네일,2-제품이미지,3-제품설명이미지',
+path 				VARCHAR(150) NOT NULL
+);
+
+--t_product의 id와 t_image의 id 릴레이션
+
+CREATE TABLE t_user
+(
+email				VARCHAR(50) NOT NULL PRIMARY KEY
+type				INT(1) DEFAULT 1 COMMENT '1-buyer,2-seller',
+);

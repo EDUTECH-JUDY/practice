@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial Page Design</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/77c9453159.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="testimonial">
+            <div class="testimonial-text">
+                <div class="user-text">
+                    <i class="fas fa-quote-left"></i>
+                    <p>국가안전보장회의는 대통령이 주재한다. 모든 국민은 법률이 정하는 바에 의하여 국방의 의무를 진다. 피고인의 자백이 고문·폭행·협박·구속의 부당한 장기화 또는 기망 기타의 방법에 의하여 자의로 진술된 것이 아니라고 인정될 때 또는 정식재판에 있어서 피고인의 자백이 그에게 불리한 유일한 증거일 때에는 이를 유죄의 증거로 삼거나 이를 이유로 처벌할 수 없다.</p>
+                    <span>JOHN RAYAN, CEO HUMBLE</span>
+                </div>
+                <div class="user-text active-text">
+                    <i class="fas fa-quote-left"></i>
+                    <p>국회는 국가의 예산안을 심의·확정한다. 국무위원은 국정에 관하여 대통령을 보좌하며, 국무회의의 구성원으로서 국정을 심의한다. 의원을 제명하려면 국회재적의원 3분의 2 이상의 찬성이 있어야 한다.</p>
+                    <span>JOHN RAYAN, CEO HUMBLE</span>
+                </div>
+                <div class="user-text">
+                    <i class="fas fa-quote-left"></i>
+                    <p>정당은 법률이 정하는 바에 의하여 국가의 보호를 받으며, 국가는 법률이 정하는 바에 의하여 정당운영에 필요한 자금을 보조할 수 있다. 국가는 청원에 대하여 심사할 의무를 진다.</p>
+                    <span>JOHN RAYAN, CEO HUMBLE</span>
+                </div>
+                <div class="user-text">
+                    <i class="fas fa-quote-left"></i>
+                    <p>누구든지 체포 또는 구속의 이유와 변호인의 조력을 받을 권리가 있음을 고지받지 아니하고는 체포 또는 구속을 당하지 아니한다. 체포 또는 구속을 당한 자의 가족등 법률이 정하는 자에게는 그 이유와 일시·장소가 지체없이 통지되어야 한다.</p>
+                    <span>JOHN RAYAN, CEO HUMBLE</span>
+                </div>
+                <div class="user-text">
+                    <i class="fas fa-quote-left"></i>
+                    <p>국토와 자원은 국가의 보호를 받으며, 국가는 그 균형있는 개발과 이용을 위하여 필요한 계획을 수립한다. 행정각부의 장은 국무위원 중에서 국무총리의 제청으로 대통령이 임명한다.</p>
+                    <span>JOHN RAYAN, CEO HUMBLE</span>
+                </div>
+            </div>
+            <div class="testimonial-pic">
+                <img src="images/user1.png" class="user-pic" onclick="showReview()">
+                <img src="images/user2.png" class="user-pic active-pic" onclick="showReview()">
+                <img src="images/user3.png" class="user-pic" onclick="showReview()">
+                <img src="images/user4.png" class="user-pic" onclick="showReview()">
+                <img src="images/user5.png" class="user-pic" onclick="showReview()">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let userTexts = document.getElementsByClassName("user-text");
+        let userPics = document.getElementsByClassName("user-pic");
+
+        function showReview(){
+            for(userPic of userPics){
+                userPic.classList.remove("active-pic");
+            }
+            for(userText of userTexts){
+                userText.classList.remove("active-text");
+            }
+            let i = Array.from(userPics).indexOf(event.target);
+
+            userPics[i].classList.add("active-pic");
+            userTexts[i].classList.add("active-text");
+        }
+    </script>
+</body>
+</html>
