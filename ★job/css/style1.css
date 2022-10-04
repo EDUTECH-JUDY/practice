@@ -1,0 +1,39 @@
+a{color:#000;}
+
+/*모바일 css --------------------------------------------------------------- */
+.container{max-width:1200px;margin:0 auto;}
+#header{display:flex;position:relative;height:80px;justify-content: space-between;align-items: center;}
+#header h1{font-weight:bold;font-size:2em;}
+#header .gnb{display:none;width:100%;position:absolute;right:0;top:80px;background:blue;}
+#header .gnb li{font-weight:bold;border-bottom:1px solid gray;}
+#header .gnb li a{display:block;padding:20px;color:#fff;}
+#header .gnb li a:hover{color:red;}
+#header .menu-toggle-btn {display:block;position:absolute;right:0;top:30px;cursor: pointer;}
+.slider{height:600px;background:url(../images/slide01.jpg)center top;color:#fff;display:flex;justify-content: center;align-items: center;}
+.slider h2{font-size:3em;}
+.slider p{font-size:1.8em;}
+
+.font-2 {font-size:2em;}
+.font-3 {font-size:5rem;}
+
+.link-section{display:flex;flex-direction: column;opacity: 1;
+    transform: translateY(0);
+    transition-delay: 1.7s;transition: 1.4s;}
+.link-section h2{font-size:2em;text-align:center;margin-top:1.5em;}
+.link-section div{padding:30px;text-align:center;box-sizing: border-box;}
+.link-section div h3{color:#222;padding:20px 0;}
+.link-section div p{color:#999;padding:20px 0;}
+footer{padding:30px 0;text-align:center;background:#333;color:#fff;}
+
+/*768이상  css --------------------------------------------------------------- */
+@media all and (min-width:768px){
+    #header .gnb{display:block;width:auto;position:absolute;right:0;top:10px;background:#fff;}
+    #header .gnb li{display:inline-block;font-weight:bold;border-bottom:0;}
+    #header .gnb li a{display:block;padding:20px;color:#000;}
+    #header .gnb li a:hover{color:red;}
+    #header .menu-toggle-btn {display:none;}
+        .link-section .item-wrap div{display:table-cell;table-layout: fixed;}
+
+    
+
+}

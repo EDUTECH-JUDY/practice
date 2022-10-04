@@ -1,0 +1,78 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    text-decoration: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* html초기화 */
+#header{height:80px;position: relative;}
+#header h1{padding:20px;}
+#header .gnb{
+    position: absolute;
+    right:0;top:80px;
+    width:100%;
+    display:none;}
+#header .gnb li{background:blue;}
+#header .gnb li a{display:block;color:#fff;padding:15px;border-bottom:1px solid #000;}
+#header .gnb li a:hover{background:red}
+#header .menu-toggle-btn{position: absolute;right:20px;top:30px;cursor: pointer;}
+#cont-wrap{background:#ccc;padding-bottom:30px;}
+#cont-wrap .txt{font-size:24px;color:blue;padding:30px 0;text-align:center;}
+#cont-wrap .c_link{width:calc(100% - 20px);margin:0 auto;font-size: 0;}
+#cont-wrap .c_link li{display:inline-block;width:calc(50% - 20px);margin:10px;font-size: 16px;}
+#cont-wrap .c_link li p{padding:10px 0;text-align:center;}
+#cont-wrap .c_link li a{display: block;padding:12px;box-sizing: border-box;color:#000;background: #fff;border-radius: 12px;}
+#cont-wrap .c_link li a:hover{background: blue;color:#fff;}
+#cont-wrap .c_link li img{width:100%;border-radius: 6px;}
+footer{padding:30px 0;text-align: center;}
+@media screen and (min-width:768px){
+	#header {max-width:960px;margin:0 auto;}
+	#header .gnb{display:block;right:0;top:10px;width:auto;background:none;}
+    #header .gnb li{display: inline-block;background:none;}
+	#header .gnb li a{color:#000;border-bottom:0px solid red;}
+	#header .gnb li a:hover{background:none;color:red;font-weight:700;}
+    #header .menu-toggle-btn{display:none;}
+	#cont-wrap {background: url('../images/main_bg.jpg') center top no-repeat;}
+	#cont-wrap .txt{color:#fff;}
+    #cont-wrap .c_link{max-width:960px;}
+    #cont-wrap .c_link li{width:calc(25% - 20px);}
+
+}
