@@ -4,32 +4,42 @@
 .main-header .cne a {color: #fff;}
 .main-header .util li {display: inline-block;}
 .main-header .util li a {color: #fff;padding: 0 10px;}
-.wrap {width: 95%;margin: 0 auto;}
+.wrap {width: 95%;max-width: 1200px;margin: 0 auto;}
 .wrap-flex {height: 50px;display: flex;justify-content: space-between;align-items: center;}
 .logo {font-size: 40px;text-align: center;padding: 30px 0;}
 .logo a {color: #1173ac;}
 /* 콘텐츠 부분 시작 */
 .main-info {text-align: center;font-size: 36px;font-weight: 700;padding: 0 0 30px;word-break: keep-all;}
 .main-info span {font-size: 16px;}
-/* .oncall-main ul {display: flex;flex-direction: column;} */
+
 .oncall-main li {text-align: center;}
-.oncall-main li a {display: block;padding: 50px;color: #fff;}
-.oncall-main li a:hover {background: #b53108;}
+.oncall-main li a {display: block;padding: 50px;color: #fff;min-height: 190px;box-sizing: border-box;}
+.oncall-main li a:hover {background: #b53108;min-height: 190px;}
 .oncall-main li:first-child {background: #5e9230;}
 .oncall-main li:nth-child(2) {background: #1173ac;}
 .oncall-main li:nth-child(3) {background: #288093;}
 .oncall-main li:nth-child(4) {background: #17487f;}
 .oncall-main li:last-child {background: #5755b5;}
 /* 공지사항 */
-.mn-notice {position: relative;background: rgba(255, 255, 255, 0.7);padding: 30px;}
+.mn-notice {position: relative;background: rgba(255, 255, 255, 0.7);padding: 30px;margin-top: 30px;box-sizing: border-box;}
 .mn-tit {font-size: 24px;padding: 0 0 20px 0;}
 .mn-notice li {position: relative;border-bottom: 1px solid #ddd;padding: 10px 0;}
 .mn-notice .date {position: absolute;right: 0;top: 10px;font-size: 12px;}
 .mn-notice .btn-mn-more {position: absolute;right: 30px;top: 35px;}
 /* 자료실 */
-.mn-refer {position: relative;background: rgba(255, 255, 255, 0.7);padding: 30px;}
-.mn-tit {font-size: 24px;padding: 0 0 20px 0;}
+.mn-refer {position: relative;background: rgba(255, 255, 255, 0.7);padding: 30px;margin-top: 30px;box-sizing: border-box;}
 .mn-refer li {position: relative;border-bottom: 1px solid #ddd;padding: 10px 0;}
 .mn-refer .date {position: absolute;right: 0;top: 10px;font-size: 12px;}
 .mn-refer .btn-mn-more {position: absolute;right: 30px;top: 35px;}
-footer {text-align: center;padding: 30px;}
+footer {text-align: center;padding: 30px;clear: both;}
+@media screen and (min-width:768px) {
+    .oncall-main ul {display: flex;flex-direction: row;flex-wrap: wrap;}
+    .oncall-main li {width: 50%;}
+    .oncall-main li:last-child {width: 100%;}
+}
+@media screen and (min-width:1024px) {
+    .oncall-main li {width: 20%;}
+    .oncall-main li:last-child {width: 20%;}
+    .mn-notice {width: calc(50% - 15px);float: left;}
+    .mn-refer {width: calc(50% - 15px);float: right;}
+}
